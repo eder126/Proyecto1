@@ -1,0 +1,50 @@
+/*
+.libroCalificacion {
+    width: 100%;
+}
+
+.calificarContenedor {
+    float: left;
+    width: 20%;
+    min-width: 55px;
+    box-sizing: border-box;
+}
+
+.inputRadio {
+    display: none;
+}
+
+.calificar {
+    overflow: auto;
+    width: 100%;
+}
+
+.CalificarUsuario {
+    width: 50%;
+}
+
+.calificarContenedor img:hover {
+    cursor: pointer;
+    filter: invert(0.5) sepia(0) saturate(0) hue-rotate(175deg);
+    transition: filter 0.5s;
+}*/
+
+/*********************************/
+/**********CALIFICACION***********/
+/*********************************/
+.calificar {
+    overflow: auto;
+    padding-top: 15px;
+    display: inline-block;
+}
+.calificarContenedor {
+    float: left;
+}
+.calificarContenedor input {
+    display: none;
+}
+.calificarContenedor img:hover {
+    cursor: pointer;
+    filter: invert(0.5) sepia(0) saturate(0) hue-rotate(175deg);
+    transition: filter 0.5s;
+}

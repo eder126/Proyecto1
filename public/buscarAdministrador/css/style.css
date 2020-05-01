@@ -1,0 +1,730 @@
+@font-face {
+	font-family: Brandon Grotesque;
+	src: url("../../fonts/brandon-grotesque-light.woff");
+  }
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background-image: url("../img/bg.png");
+	background-size: cover;
+}
+
+.wrapper {
+	overflow: auto;
+}
+
+p,
+a {
+	color: #30343F;
+	font-family: 'Trebuchet MS';
+	text-decoration: none;
+}
+
+
+a:hover {
+    cursor: pointer;
+	color: #B88C4B;
+	cursor: pointer;
+}
+
+.divGrande {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+}
+
+/*  Nav  */
+
+.registrarLogin {
+	margin: 0;
+	padding: 0;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-left: 1.8px solid #36558F;
+	color: #30343F;
+	font-family: "Trebuchet MS";
+	text-decoration: none;
+}
+
+.registrarLogin:hover {
+    cursor: pointer;
+	color: #B88C4B;
+}
+
+.nombrePerfilArriba {
+	margin-right: 10px;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	font-family: "Trebuchet MS";
+	font-size: 1.2rem;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #FFFFEA;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 12px 16px;
+	z-index: 555;
+	right: 0;
+	font-family: "Trebuchet MS";
+	font-size: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-content>p>a {
+	color: #30343F;
+	text-decoration: none;
+}
+
+.dropdown-content>p>a:hover {
+    cursor: pointer;
+	color: #B88C4B;
+}
+
+
+nav {
+	background-color: #FFFFEA;
+	padding: 20px;
+}
+
+
+.hamb {
+	display: none;
+}
+
+.logoi {
+	float: left;
+	width: 25%;
+}
+
+.linksn {
+	float: right;
+}
+
+.linksn>a {
+	margin: 0;
+	padding: 0;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	color: #30343F;
+	font-family: "Trebuchet MS";
+	border-left: 1.8px solid #36558F;
+	text-decoration: none;
+}
+
+.linksn>a:hover {
+    cursor: pointer;
+	color: #B88C4B;
+}
+
+.linksn2 {
+	float: right;
+}
+
+.linksn2>a>i {
+	font-size: 1.4rem;
+}
+
+.linksn2>a>i:hover {
+    cursor: pointer;
+	color: #B88C4B;
+}
+
+.logoi>img {
+	height: auto;
+	width: 60%;
+	max-width: 200px;
+	min-width: 150px;
+}
+
+hr {
+	background-color: #ffffff;
+}
+
+.hr {
+	margin: 2%;
+}
+
+.linksn2>a>img {
+	width: 30%;
+	height: auto;
+
+}
+
+/* Advertencia */
+
+.advertencia {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #FFFFEA;
+	width: 40%;
+	z-index: 99;
+	border: 1.5px solid rgba(21, 146, 230, 0.55);
+}
+
+
+.tituloAdv {
+	text-align: center;
+	font-family: 'Brandon Grotesque',serif;
+	font-weight: 500;
+}
+
+
+.mensaje {
+	text-align: center;
+	font-family: 'Trebuchet MS';
+	font-weight: 500;
+}
+
+.overlay {
+	filter: blur(3px);
+	opacity: 0.5;
+}
+
+
+::placeholder {
+	font-size: 0.8rem;
+	text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+.btns {
+	text-align: center;
+}
+
+
+.btnVerde {
+	background-color: #009688;
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	border: none;
+	padding: 10px;
+	margin: 20px 30px;
+	border-radius: 2px;
+	box-shadow: 0.5px 1px 0 grey;
+}
+
+.ocultar {
+	display: none !important;
+}
+
+.btnVerde:hover {
+    cursor: pointer;
+	background-color: #2fb2a6;
+	transition: color 0.3s;
+}
+
+.btnError {
+	background-color: #E15050;
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	border: none;
+	padding: 10px;
+	margin: 20px 30px;
+	border-radius: 2px;
+	box-shadow: 0.5px 1px 0 grey;
+}
+
+.btnError:hover {
+    cursor: pointer;
+	background-color: #e57777;
+	transition: color 0.3s;
+}
+
+
+.cajaBtn {
+	display: inline;
+}
+
+
+
+
+/*  Caja  */
+
+
+.caja {
+	width: 80%;
+	flex: 1 1 auto;
+	align-self: center;
+	margin: 2%;
+	display: flex;
+}
+
+
+.sidebar {
+	background-color: #FFFFEA;
+	border: 1.5px solid rgb(21, 146, 230, 0.55);
+	width: 25%;
+	display: inline-block;
+	flex: 1 1 auto;
+	box-sizing: border-box;
+	margin-right: 1%;
+}
+
+.labelRegistrarBuscar {
+	display: block;
+	text-align: center;
+	color: white;
+	font-family: 'Brandon Grotesque',serif;
+    font-size: 1.2rem;
+    margin-top: 1%;
+}
+
+.contenido {
+	background-color: RGBA(45, 45, 45, 0.55);
+	border: 1.5px solid rgb(21, 146, 230, 0.55);
+	width: 75%;
+	display: inline-block;
+	flex: 1 1 auto;
+	box-sizing: border-box;
+}
+
+.nombreSpan {
+	color: white;
+	width: 25%;
+	display: inline-block;
+	text-align: justify;
+    font-size: 1.2rem;
+}
+
+.nombreSpan > a {
+    color: white;
+}
+
+.sideMenu {
+	background-color: #FFFFEA;
+	box-sizing: border-box;
+}
+
+.fa-plus-circle {
+	color: #009688;
+	font-size: 1.3rem;
+}
+.fa-plus-circle:hover {
+	cursor: pointer;
+	color: #2fb2a6;
+	transition: color 0.3s;
+}
+
+.sideMenu > h2 { 
+	margin: 5%;
+	font-family: 'Brandon Grotesque',serif;
+	text-align: center;
+}
+
+.sideMenu > ul { 
+	list-style: none;
+	font-family: 'Brandon Grotesque',serif;
+}
+
+
+
+.xSalir {
+	display: block;
+	text-align: right;
+	padding: 1% 1% 0 0;
+}
+
+.xSalir>img {
+	width: 2.6%;
+	height: auto;
+}
+
+.titulo {
+	color: white;
+	text-align: center;
+	font-family: 'Brandon Grotesque',serif;
+	font-weight: 500;
+}
+
+.inputLogin {
+	border: 1px solid #707070;
+	background-color: white;
+	width: 35%;
+	
+	box-shadow: 0 4px 6px RGBA(0, 0, 0, 0.16);
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 1rem;
+	margin-bottom: 30px;
+}
+
+.inputAgregar {
+	display: inline;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.btnPequenno {
+	height: auto !important;
+    font-size: 1rem;
+	padding: 10px;
+	border: 0;
+}
+
+.agregar {
+	text-align: center;
+}
+
+.select {
+	box-sizing: content-box;
+}
+
+.input {
+	text-align: right;
+}
+
+.switchTexto {
+	display: flex;
+	vertical-align: middle;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2%;
+}
+
+
+.switchTexto p,
+.switchTexto label {
+	display: inline-block;
+}
+
+.switchTexto p {
+	padding: 0 10px;
+	margin: 0;
+	font-family: "Trebuchet MS";
+	font-size: 1.2rem;
+}
+
+.lista {
+	list-style: none;
+	text-align: center;
+	color: white;
+	padding: 0 10px;
+	margin: 4%;
+	font-family: "Trebuchet MS";
+	font-size: 1.2rem;
+}
+
+.btnAzul {
+	background-color: #4D8AB8;
+	color: white;
+	font-weight: bold;
+	font-size: 1vw;
+	border: none;
+	height: 5vw;
+	width: 10;
+	border-radius: 2px;
+	box-shadow: 0.5px 1px 0 grey;
+	margin: 0 1%;
+}
+
+.btnRojo {
+	background-color: #E15050;
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 10px;
+	border: none;
+	border-radius: 2px;
+	box-shadow: 0.5px 1px 0 grey;
+	margin: 0 1%;
+}
+
+li {
+	margin-bottom: 2%;
+}
+
+
+/************************************/
+/************************************/
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: #80CBC4;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider {
+	background-color: rgba(128, 203, 196, 50%);
+}
+
+input:focus+.slider {
+	box-shadow: 0 0 1px rgba(128, 203, 196, 50%);
+}
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/*  Footer  */
+
+
+footer {
+	margin-top: auto;
+	background-color: #FFFFEA;
+	padding: 2%;
+}
+
+.footerLogo>img {
+	height: auto;
+	width: 15%;
+}
+
+.contenedores {
+	width: 80%;
+	float: left;
+}
+
+.footerContenedor {
+	width: 33%;
+	float: left;
+}
+
+.footerContenedor>a {
+	display: block;
+	color: #30343F;
+}
+
+.footerContenedor>a:hover {
+    cursor: pointer;
+	display: block;
+	color: #B88C4B;
+}
+
+.footerClientes {
+	width: 20%;
+	float: left;
+}
+
+.footerClientesImg {
+	margin: 0 2%;
+}
+
+.footerClientesImg>img {
+	height: auto;
+	width: 100%;
+}
+
+.footerClientesImg {
+	float: left;
+	width: 45%;
+}
+
+.linksAbajo {
+	width: 100%;
+	height: auto;
+}
+
+
+
+
+@media (max-width: 786px) {
+
+	.hamb {
+		display: block;
+		float: right;
+	}
+
+	.notHidden {
+		display: block !important;
+	}
+
+	.linksn {
+		width: 100%;
+	}
+
+
+	.linksn>a {
+		display: block;
+		background-color: #efefdd;
+		font-size: 1.1rem;
+	}
+
+	.linksn>a:hover {
+    cursor: pointer;
+		background-color: #ddddc9;
+		color: #B88C4B;
+	}
+
+
+	.linksn2 {
+		display: none;
+		float: none;
+		text-align: center;
+	}
+
+	.linksn2>a {
+		margin: 0;
+		padding: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		color: #30343F;
+	}
+
+	.linksn2>a:hover {
+    cursor: pointer;
+		color: #B88C4B;
+	}
+
+	.logoConHamb {
+		display: flex;
+		vertical-align: middle;
+		align-items: center;
+	}
+
+	.icon {
+		font-size: 40px;
+		margin-left: auto;
+	}
+
+	.hamb {
+		margin-left: auto;
+	}
+
+	.footerLogo {
+		text-align: center;
+	}
+
+	.footerLogo>img {
+		height: auto;
+		width: 30%;
+	}
+
+	.contenedores {
+
+		width: 100%;
+	}
+
+	.footerContenedor {
+		text-align: center;
+	}
+
+	.footerClientes {
+		display: none;
+	}
+
+
+
+	.btnVerde {
+		margin: 5px;
+	}
+
+	.btns {
+		margin-bottom: 10px;
+	}
+
+	.cajaBtn {
+		width: 100%;
+	}
+
+	.inputLogin {
+		width: 75%;
+		margin-bottom: 10px;
+	}
+
+	.btnPequenno {
+		width: 20%;
+		font-size: 0.7rem !important;
+	}
+
+	.xSalir {
+		padding: 2% 2% 0 0;
+	}
+
+	.xSalir > img {
+		width: 5%;
+	}
+
+	.switchTexto p {
+		font-size: 0.8rem;
+		font-weight: bold;
+	}
+
+	.sidebar {
+    width: 100%;
+    padding-bottom: 10px;
+	}
+
+	.sideMenu > ul > li {
+		margin: 0 2%;
+		display: block;
+		/* O poner float:left para que se vea pegado */
+	}
+
+	
+	
+	.nombreSpan { 
+		font-size: 0.8rem;
+	}
+
+	.caja {
+		display: block;
+	}
+
+	.contenido {
+		width: 100%;
+	}
+
+}

@@ -1,0 +1,394 @@
+body {
+    font-family: sans-serif;
+}
+
+.wrapper {
+    overflow: auto;
+}
+
+.titulosEquipo {
+    text-align: center;
+}
+
+
+.txtContenido {
+    text-align: center;
+    background-color: #27282c;
+    padding: 7%;
+    font-size: 20px;
+}
+
+.txtImagen {
+    background-image: url("../img/backGround.jpg");
+    text-align: center;
+    background-color: #27282c;
+    background-size: cover;
+    padding: 3%;
+    margin-top: 1%;
+}
+
+.imagenMV {
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+
+}
+
+
+.txtM {
+    float: left;
+font-size: 19px;
+
+}
+
+.imgM {
+    float: right;
+    width: 32%;
+}
+
+
+.txtV {
+    float: right;
+font-size: 19px;
+}
+
+.imgV {
+    width: 50%;
+    float: left;
+}
+
+
+
+.infoEmpresa {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    margin-top: 2%;
+    background-color: rgba(28, 190, 219, 0.76);
+
+}
+
+.infoEmpresa > h3 {
+    display: inline;
+}
+
+.infoEmpresa > p {
+    display: inline-block;
+}
+
+.infoEmpresa > ul {
+    list-style: none;
+    margin: 10px;
+}
+
+.resultados {
+    padding: 2%;
+    font-size: 20px;
+}
+
+
+
+
+/*css copiado*/
+
+.portafolio {
+    padding-top: 1%;
+    text-align: center;
+}
+
+.portafolio > h1 {
+    color: white;
+}
+
+height: auto;
+}
+
+.avatar > img {}
+
+.imgAvatar {
+    width: 35%;
+}
+
+.infoEquipo {
+    padding: 5%;
+    box-sizing: border-box;
+    float: right;
+    width: 60%;
+    text-align: left;
+    height: 260px;
+}
+
+.infoEquipo > h3 {
+    display: inline;
+}
+
+.infoEquipo > p {
+    display: inline-block;
+}
+
+.infoEquipo > ul {
+    list-style: none;
+}
+
+
+
+.cajaEquipo {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    background-color: #ffffff;
+    border: 5px solid;
+    border-color: rgba(28, 190, 219, 0.76);
+    padding: 2%;
+}
+
+.cajaEquipo:hover {
+    transform: scale(0.97);
+    transition: transform 1s;
+    box-shadow: 0 0 5rem rgba(0, 0, 0, .9);
+}
+
+.servicios {
+    padding: 2% 5%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #27282c;
+}
+
+.servicios > h1 {
+    text-align: center;
+}
+
+.cajas {
+    margin: 0 auto;
+    padding: 2% 5%;
+}
+
+
+.caja {
+    margin: 5%;
+    text-align: center;
+    background-color: white;
+    float: left;
+    width: 22.3%;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 9px 15px 1px rgba(0, 0, 0, 0.45);
+}
+
+.caja:hover {
+    transform: translateZ(1rem) scale(0.9);
+    transition: transform 1s;
+}
+
+.caja > img {
+    padding: 2% 0;
+    width: 70%;
+    object-fit: scale-down;
+}
+
+.caja > p {
+    padding: 0 5%;
+}
+
+
+
+/*css copiado*/
+
+
+/* footer */
+
+footer {
+    background-color: #27282c;
+    display: inline-block;
+}
+
+.footerClientesImg > img {
+    width: 10%;
+    float: right;
+
+
+}
+
+.hrclass {
+    border-bottom: 10px solid rgba(28, 190, 219, 0.76);
+    border-top: 10px solid rgba(28, 190, 219, 0.76);
+    color: rgba(28, 190, 219, 0.76);
+    width: 90%;
+    background-color: rgba(28, 190, 219, 0.76);
+}
+
+.columnaFooter {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.12);
+    height: 130px;
+
+}
+
+.espaciado {
+    padding: 2%;
+}
+
+.logoGrande {
+    margin: 7%
+}
+
+.logo {
+    width: 24%;
+}
+
+.portafolio {
+    display: block;
+}
+
+.blanco {
+    font-family: sans-serif;
+    color: white;
+}
+
+.tamano {
+    font-size: 17px;
+}
+
+.columnaFooter > img {
+    width: 14%;
+
+}
+
+.top {
+    width: 35%;
+    text-align: center;
+    height: 35%;
+    border-radius: 30px 30px 30px 30px;
+    margin: 5%;
+    border: solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+.logoBackgroud {
+    width: 70%;
+    height: 70%;
+    text-align: center;
+    margin: 1.5%;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid black;
+}
+
+/* barra de busqueda*/
+
+
+.ulMenu > a {
+    padding: 1%;
+    width: auto;
+    height: 16%;
+
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    float: left;
+    font-size: 14px;
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+
+}
+
+.menu {
+    width: 98%;
+    height: auto;
+
+
+    text-align: center;
+    float: left;
+    position: fixed;
+    border: solid black;
+    border-radius: 30px 30px 30px 30px;
+    background-color: rgba(28, 190, 219, 0.66);
+
+}
+
+.opcionCeleste {
+    border-radius: 40px 40px 40px 40px;
+    text-align: center;
+    margin: 0.5%;
+}
+
+
+
+.imagenTop {
+    width: 9%;
+    display: block;
+
+
+}
+
+
+
+/* media  nivel medio*/
+
+@media (max-width: 868px) {
+
+    .avatar > img {
+        display: none;
+
+    }
+
+    .infoEquipo {
+        float: left;
+    }
+
+    .infoEquipo > ul > li:nth-child(6n) {
+        color: white;
+        text-align: left;
+    }
+
+
+    .ulMenu > a {
+        width: 13%;
+        font-size: 13px;
+
+    }
+
+    .menu {
+        width: 97%;
+        height: auto;
+
+    }
+
+    .opcionCeleste {
+        margin: 0%;
+    }
+
+    .columnaFooter {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.12);
+    height: 130px;
+
+}
+
+    .displaynone{
+        display: none;
+    }
+
+}
+
+@media (max-width: 950px) {
+        .columnaFooter {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.12);
+    height: 130px;
+
+}
+
+    .displaynone{
+        display: none;
+    }
+    
+}

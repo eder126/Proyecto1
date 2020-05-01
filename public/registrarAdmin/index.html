@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Registrar Admin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/98bd4b18c1.js"></script>
+	<link rel="stylesheet" type="text/css" href="registrarAdmin/css/style.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="registrarAdmin/icon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="registrarAdmin/icon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="registrarAdmin/icon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="registrarAdmin/icon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="registrarAdmin/icon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="registrarAdmin/icon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="registrarAdmin/icon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="registrarAdmin/icon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="registrarAdmin/icon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="registrarAdmin/icon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="registrarAdmin/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="registrarAdmin/icon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="registrarAdmin/icon/favicon-16x16.png">
+	<link rel="manifest" href="registrarAdmin/icon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="registrarAdmin/icon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+	<div class="divGrande">
+		<nav>
+			<div class="wrapper arriba">
+				<div class="logoConHamb">
+					<div class="logoi"> <img src="registrarAdmin/img/LibrosCR3.png"></div>
+					<div class="hamb">
+						<a href="javascript:void(0);" class="icon" onclick="ensennar()">
+							<i class="fa fa-bars"></i>
+						</a>
+					</div>
+				</div>
+				<div id="menu1" class="linksn">
+					<a href="/mainPage">Inicio</a>
+					<a href="/buscarLibros">Libros</a>
+					<a href="/buscarClub">Clubes de Lectura</a>
+				</div>
+			</div>
+			<div class="abajo">
+				<hr>
+				<div id="menu3" class="linksn">
+				</div>
+			</div>
+		</nav>
+
+
+		<!-- Debería de quedarse así, No modificar a menos que sea ya necesario. -->
+		<div class="advertencia ocultar" id="advertencia">
+			<h3 class="tituloAdv" id="tituloAdv"></h3>
+			<p class="mensaje" id="mensaje"></p>
+			<div class="btns">
+				<div class="cajaBtn" id="btnCancelar">
+					<button type="submit" class="btnError advertenciaBtn" onclick="cancelar();">Cancelar</button>
+				</div>
+				<div class="cajaBtn" id="btnAceptar">
+					<button type="submit" class="btnVerde advertenciaBtn" onclick="aceptar();">Aceptar</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="caja" id="caja">
+				<div class="sidebar">
+					<div class="sideMenu">
+						<h2>Menú</h2>
+				<ul>
+					<li><a href="/buscarAdministrador">Administradores</a></li>
+					<li><a href="/buscarAutoresAdmin">Autores</a></li>
+					<li><a href="/buscarBitacora">Bitácora</a></li>
+					<li><a href="/buscarCategoria">Categorías</a></li>
+					<li><a href="/buscarGenero">Géneros</a></li>
+					<li><a href="/impuesto">Impuesto de Ventas</a></li>
+					<li><a href="/agregarInventarioAdmin">Inventario</a></li>
+					<li><a href="/buscarLibrosAdmin">Libros</a></li>
+					<li><a href="/nuevasLibrerias">Nuevas Librerías</a></li>
+					<li><a href="/promociones">Promociónes</a></li>
+					<li><a href="/buscarSucursalAdmin">Sucursales</a></li>
+					<li><a href="/buscarUsuariosAdmin">Usuarios</a></li>
+				</ul>
+					</div>
+				</div>
+				<div class="contenido">
+			<h1 class="titulo">Registro De Administrador</h1>
+			<form method="POST" action="/registrarAdmin" onsubmit="send(event);">
+					<div class="wrapper">
+						<div class="izquierda">
+							<input title="Nombre" name="nombre" type="text" class="inputLogin" placeholder="Nombre" required
+								oninvalid="errorInput(this);">
+							<input title="Apellido" name="apellido" type="text" class="inputLogin" placeholder="Apellido" required
+								oninvalid="errorInput(this);">
+							<input title="Segundo apellido" name="apellido2" type="text" class="inputLogin" placeholder="Segundo Apellido" required
+								oninvalid="errorInput(this);">
+							<input title="Email" name="email" type="email" class="inputLogin" placeholder="Email" required
+									oninvalid="errorInput(this);">
+	
+						</div>
+						<div class="izquierda" id="normal">
+								<select title="Tipo ID" name="tid" type="text" class="inputLogin select" required oninvalid="errorInput(this);">
+									<option selected value="" disabled>Tipo ID</option>
+									<option value="0">Cédula nacional</option>
+									<option value="1">Dimex</option>
+									<option value="2">Otro</option>
+								</select>
+								<input title="ID" name="id" type="text" class="inputLogin" placeholder="ID" required
+									oninvalid="errorInput(this);">
+							<select title="Género" name="sexo" type="text" class="inputLogin select" required
+								oninvalid="errorInput(this);">
+								<option selected value="" disabled>Género</option>
+								<option value="0">Hombre</option>
+								<option value="1">Mujer</option>
+								<option value="2">Otro</option>
+							</select>
+							<input title="Teléfono" name="tel" type="text" class="inputLogin" placeholder="Teléfono" required
+								oninvalid="errorInput(this);">
+						</div>
+					</div>
+
+
+					<h2 class="titulo">Dirección</h2>
+					<div class="contenedorMapa">
+						<div class="map-container">
+							<div class="mapa" id="map"></div>
+						</div>
+						<div class="inputsMapa">
+							<select id="provincias" value="" name="provincia" class="inputMapas select" onchange="getCantones();" required oninvalid="errorInput(this);">
+							</select>
+							<select id="cantones" value="" name="canton" class="inputMapas ocultar select"
+								onchange="getDistritos();" required oninvalid="errorInput(this);">
+							</select>
+							<select id="distritos" value="" name="distrito" class="inputMapas ocultar select"
+								onchange="distritoSeleccionado();" required oninvalid="errorInput(this);">
+							</select>
+							<input id="coordenadas" value="" name="coordenadas" type="text" class="inputMapas coordenadas"
+								placeholder="Coordenadas" required oninvalid="errorInput(this);"">
+						</div>
+					</div>
+	
+	
+	
+					<div class="btns">
+						<div class="cajaBtn">
+							<button type="submit" class="btnVerde btnSubmit">Registrar</button>
+						</div>
+					</div>
+
+			</form>
+		</div>
+		</div>
+
+
+		<footer>
+			<div class="footerLogo">
+				<img src="registrarAdmin/img/librosEddy3.png" />
+			</div>
+			<div class="wrapper">
+				<div class="contenedores wrapper">
+					<div class="footerContenedor">
+						<a>Acerca de nosotros</a>
+						<a>Contáctenos</a>
+						<a>Preguntas frecuentes</a>
+					</div>
+					<div class="footerContenedor">
+						<a>Políticas de uso</a>
+						<a>Términos de servicio</a>
+					</div>
+					<div class="footerContenedor">
+						<a href="/registrar">Registrarse</a>
+						<a href="/login">Iniciar Sesión</a>
+					</div>
+				</div>
+				<div class="footerClientes wrapper">
+					<div class="footerClientesImg">
+						<img src="registrarAdmin/img/barnesnoble.png" />
+					</div>
+					<div class="footerClientesImg">
+						<img src="registrarAdmin/img/booksforkids.png" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="registrarAdmin/js/javascript.js"></script>
+	<script src="registrarAdmin/js/registrar.js"></script>
+	<script src="registrarAdmin/js/mapa.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3cOQNB4cQjQDSGWiB_nT2H2pEOuD3w60&callback=initMap"
+		async defer></script>
+</body>
+
+</html>

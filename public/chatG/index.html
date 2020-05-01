@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/librosEddy.png">
+        <title>Conversación</title>
+        <link rel="stylesheet" href="../chatG/css/style.css" type="text/css">
+        <script src="https://kit.fontawesome.com/98bd4b18c1.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+		<link rel="apple-touch-icon" sizes="57x57" href="../chatG/icon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="../chatG/icon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="../chatG/icon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="../chatG/icon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="../chatG/icon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="../chatG/icon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="../chatG/icon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="../chatG/icon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="../chatG/icon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="../chatG/icon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../chatG/icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="../chatG/icon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../chatG/icon/favicon-16x16.png">
+		<link rel="manifest" href="../chatG/icon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="../chatG/icon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+    </head>    
+    <body>
+        <div class="divGrande">
+            <nav>
+                <div class="wrapper arriba">
+                    <div class="logoConHamb">
+                        <div class="logoi"> <img src="../chatG/img/LibrosCR3.png"></div>
+                        <div class="hamb">
+                            <a href="javascript:void(0);" class="icon" onclick="ensennar()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="menu1" class="linksn">
+                        <a href="/mainPage">Inicio</a>
+                        <a href="/buscarLibros">Libros</a>
+                        <a href="/buscarClub">Clubes de Lectura</a>
+                    </div>
+                </div>
+				<div class="abajo">
+					<hr>
+					<div id="menu3" class="linksn">
+					</div>
+				</div>
+			</nav>
+            <div class="advertencia ocultar" id="advertencia">
+                <h3 class="tituloAdv" id="tituloAdv"></h3>
+                <p class="mensaje" id="mensaje"></p>
+                <div class="btns">
+                    <div class="cajaBtn" id="btnCancelar">
+                        <button type="submit" class="btnError advertenciaBtn" onclick="cancelar();">Cancelar</button>
+                    </div>
+                    <div class="cajaBtn" id="btnAceptar">
+                        <button type="submit" class="btnVerde advertenciaBtn" onclick="aceptar();">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="caja" id="caja">
+                <div class="sidebar" id="sidebar">
+                    <h1 class="titulo adicional" id="titulo">Miembros</h1>
+                    <div class="miembrosChat" id="miembrosChat">
+                        
+                    </div>
+                </div>
+                <div class="contenido">
+                    <h1 class="titulo adicional" id="titulo"></h1>
+                    <div class="wrapperContenido" id="wrapperContenido">
+                        <!--MENSAJES-->
+                        
+                    </div>
+                    <div class="wrapperMensaje">
+                        <form method="POST" onsubmit="enviar(event);">
+                            <div class="mensajeInput">
+                                <textarea id="mensajePersonal" name="mensajePersonal" placeholder="Escribe tu mensaje..." rows="1"></textarea>
+                            </div>
+                            <div class="mensajeEnviar">
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mostrarMas ocultar" id="mas"><a onclick="calculos(comprasArr);">Mostrar más</a></div>
+                </div>
+            </div>
+            <footer>
+                <div class="footerLogo">
+                    <img src="../chatG/img/librosEddy3.png" />
+                </div>
+                <div class="wrapper">
+                    <div class="contenedores wrapper">
+                        <div class="footerContenedor">
+                            <a>Acerca de nosotros</a>
+                            <a>Contactenos</a>
+                            <a>Preguntas frecuentes</a>
+                        </div>
+                        <div class="footerContenedor">
+                            <a>Politicas de uso</a>
+                            <a>Terminos de servicio</a>
+                        </div>
+                        <div class="footerContenedor">
+                            <a href="/registrar">Registrarse</a>
+                            <a href="/login">Iniciar Sesión</a>
+                        </div>
+                    </div>
+                    <div class="footerClientes wrapper">
+                        <div class="footerClientesImg">
+                            <img src="../chatG/img/barnesnoble.png" />
+                        </div>
+                        <div class="footerClientesImg">
+                            <img src="../chatG/img/booksforkids.png" />
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="../chatG/js/javascript.js"></script>
+        <script src="../chatG/js/detalles.js"></script>
+    </body>
+</html>

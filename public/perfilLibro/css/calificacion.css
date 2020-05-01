@@ -1,0 +1,42 @@
+/*********************************/
+/**********CALIFICACION***********/
+/*********************************/
+.calificar {
+    overflow: auto;
+    padding: 15px;
+    display: inline-block;
+}
+.calificarContenedor {
+    float: left;
+}
+.calificarContenedor input {
+    display: none;
+}
+.calificarContenedor img:hover {
+    cursor: pointer;
+    filter: invert(0.5) sepia(0) saturate(0) hue-rotate(175deg);
+    transition: filter 0.5s;
+}
+
+.calificar2 {
+    display: none;
+}
+
+/******************************************/
+/************RESPONSIVE********************/
+/******************************************/
+
+@media (max-width: 786px) {
+
+    .calificar {
+        display: none;
+    }
+
+    .calificar2 {
+        display: inline;
+    }
+
+    .calificarContenedor {
+        float: none;
+    }
+}

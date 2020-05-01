@@ -1,0 +1,506 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Cabin Condensed";
+}
+
+section {
+    height: 100vh;
+}
+
+section:nth-child(1) {
+    background: linear-gradient(270deg, #d166cc, #ff01f3, #dca6da);
+    background-size: 600% 600%;
+
+    -webkit-animation: Fondo1 26s ease infinite;
+    -moz-animation: Fondo1 26s ease infinite;
+    animation: Fondo1 26s ease infinite;
+}
+
+@-webkit-keyframes Fondo1 {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Fondo1 {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Fondo1 {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+section:nth-child(2) {
+    background: linear-gradient(270deg, #5ee93a, #01ff82, #b9efa8);
+    background-size: 600% 600%;
+
+    -webkit-animation: Fondo2 26s ease infinite;
+    -moz-animation: Fondo2 26s ease infinite;
+    animation: Fondo2 26s ease infinite;
+}
+
+@-webkit-keyframes Fondo2 {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Fondo2 {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Fondo2 {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+section:nth-child(3) {
+    background: linear-gradient(181deg, #3a3fe9, #8880fc, #183691);
+    background-size: 600% 600%;
+
+    -webkit-animation: Fondo3 26s ease infinite;
+    -moz-animation: Fondo3 26s ease infinite;
+    animation: Fondo3 26s ease infinite;
+}
+
+@-webkit-keyframes Fondo3 {
+    0% {
+        background-position: 54% 0%
+    }
+
+    50% {
+        background-position: 47% 100%
+    }
+
+    100% {
+        background-position: 54% 0%
+    }
+}
+
+@-moz-keyframes Fondo3 {
+    0% {
+        background-position: 54% 0%
+    }
+
+    50% {
+        background-position: 47% 100%
+    }
+
+    100% {
+        background-position: 54% 0%
+    }
+}
+
+@keyframes Fondo3 {
+    0% {
+        background-position: 54% 0%
+    }
+
+    50% {
+        background-position: 47% 100%
+    }
+
+    100% {
+        background-position: 54% 0%
+    }
+}
+
+
+section:nth-child(4) {
+    background: linear-gradient(181deg, #e9e93a, #fcf180, #d6e69e);
+    background-size: 600% 600%;
+
+    -webkit-animation: Fondo4 26s ease infinite;
+    -moz-animation: Fondo4 26s ease infinite;
+    animation: Fondo4 26s ease infinite;
+}
+
+@-webkit-keyframes Fondo4 {
+    0% {
+        background-position: 54% 0%
+    }
+
+    50% {
+        background-position: 47% 100%
+    }
+
+    100% {
+        background-position: 54% 0%
+    }
+}
+
+@-moz-keyframes Fondo4 {
+    0% {
+        background-position: 54% 0%
+    }
+
+    50% {
+        background-position: 47% 100%
+    }
+
+    100% {
+        background-position: 54% 0%
+    }
+}
+
+@keyframes Fondo4 {
+    0% {
+        background-position: 54% 0%
+    }
+
+    50% {
+        background-position: 47% 100%
+    }
+
+    100% {
+        background-position: 54% 0%
+    }
+}
+
+
+section:nth-child(5) {
+    background: linear-gradient(281deg, #e93a3a, #ff8071, #c41004);
+    background-size: 600% 600%;
+    height: auto;
+
+    -webkit-animation: Fondo5 26s ease infinite;
+    -moz-animation: Fondo5 26s ease infinite;
+    animation: Fondo5 26s ease infinite;
+}
+
+@-webkit-keyframes Fondo5 {
+    0% {
+        background-position: 0% 52%
+    }
+
+    50% {
+        background-position: 100% 49%
+    }
+
+    100% {
+        background-position: 0% 52%
+    }
+}
+
+@-moz-keyframes Fondo5 {
+    0% {
+        background-position: 0% 52%
+    }
+
+    50% {
+        background-position: 100% 49%
+    }
+
+    100% {
+        background-position: 0% 52%
+    }
+}
+
+@keyframes Fondo5 {
+    0% {
+        background-position: 0% 52%
+    }
+
+    50% {
+        background-position: 100% 49%
+    }
+
+    100% {
+        background-position: 0% 52%
+    }
+}
+
+.contacto {
+    padding-bottom: 5%;
+}
+
+.logoCentro {
+    padding-top: 4%;
+    text-align: center;
+}
+
+.logoCentro > img {
+    width: 50%;
+    height: 100%;
+}
+
+.menu {
+    font-family: "Cabin Condensed";
+    text-align: center;
+    padding-top: 4%;
+}
+
+.ulMenu {
+    list-style: none;
+}
+
+.ulMenu > li {
+    font-size: 2.2rem;
+}
+
+.ulMenu > li > a {
+    text-decoration: none;
+    color: #3FECEC !important;
+}
+
+.ulMenu > li > a:hover {
+    cursor: pointer;
+    color: #7ef8f8 !important;
+}
+
+.mision {
+    text-align: left;
+    padding: 5%;
+}
+
+.vision {
+    text-align: right;
+    padding: 5%;
+}
+
+.servicios {
+    padding: 2% 5%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.servicios > h1 {
+    text-align: center;
+}
+
+.wrapper {
+	overflow: auto;
+}
+
+p,
+a {
+	color: #30343F;
+	font-family: 'Trebuchet MS';
+	text-decoration: none;
+}
+
+
+a:hover {
+    cursor: pointer;
+	color: #B88C4B;
+	cursor: pointer;
+}
+
+.cajas {
+    margin: 0 auto;
+    padding: 2% 5%;
+}
+
+.caja {
+    margin: 5%;
+    text-align: center;
+    background-color: white;
+    float: left;
+    width: 22.3%;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 9px 15px 1px rgba(0, 0, 0, 0.45);
+}
+
+.caja:hover {
+    cursor: pointer;
+    transform: translateY(-1rem) rotate(25deg) scale(0.85);
+    transition: transform 1s;
+}
+
+.caja > img {
+    padding: 2% 0;
+    width: 70%;
+    object-fit: scale-down;
+}
+
+.caja > p {
+    padding: 0 5%;
+}
+
+.equipo {
+    padding-top: 0.01%;
+}
+
+.equipo > h1 {
+    text-align: center;
+}
+
+.equipoCaja {
+    display: block;
+}
+
+.cajaEquipo {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    background-color: #11BAB5;
+    border: 1px solid white;
+}
+
+.cajaEquipo:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: transform 1s;
+}
+
+.infoEquipo {
+    padding: 5%;
+    box-sizing: border-box;
+    float: left;
+    width: 60%;
+    text-align: right;
+    height: 260px;
+}
+
+.infoEquipo > h3 {
+    display: inline;
+}
+
+.infoEquipo > p {
+    display: inline-block;
+}
+
+.infoEquipo > ul {
+    list-style: none;
+}
+
+.infoEquipo > ul > li:nth-child(2n) {
+    color: white;
+    text-align: left;
+}
+
+.avatar {
+    float: left;
+    width: 30%;
+}
+
+.avatar > img {
+    display: inline-block;
+    padding: 2% 0;
+    width: 200px;
+    height: 200px;
+    object-fit: scale-down;
+}
+
+.portafolio {
+    padding-top: 1%;
+    text-align: center;
+}
+
+.portafolio > h1 {
+    color: white;
+}
+
+.logos {
+    width: 25%;
+    height: auto;
+}
+
+.logoGrande {
+    width: 55%;
+    height: auto;
+}
+
+.portafolio {
+    display: block;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .caja {
+        width: 100%;
+        margin: 2% 0;
+    }
+
+    section:nth-child(1) {
+        padding: 5%;
+        height: auto;
+    }
+
+
+    section:nth-child(3) {
+        height: auto;
+    }
+
+    section:nth-child(4) {
+        height: auto;
+    }
+
+
+    .caja:hover {
+    cursor: pointer;
+        transform: none;
+    }
+
+    .avatar {
+        text-align: center;
+        width: 100%;
+    }
+
+    .infoEquipo {
+        text-align: center;
+        width: 100%;
+    }
+
+
+}

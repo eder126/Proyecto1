@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Nuevas Librerías</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/98bd4b18c1.js"></script>
+	<link rel="stylesheet" type="text/css" href="nuevasLibrerias/css/style.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="nuevasLibrerias/icon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="nuevasLibrerias/icon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="nuevasLibrerias/icon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="nuevasLibrerias/icon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="nuevasLibrerias/icon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="nuevasLibrerias/icon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="nuevasLibrerias/icon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="nuevasLibrerias/icon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="nuevasLibrerias/icon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="nuevasLibrerias/icon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="nuevasLibrerias/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="nuevasLibrerias/icon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="nuevasLibrerias/icon/favicon-16x16.png">
+	<link rel="manifest" href="nuevasLibrerias/icon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="nuevasLibrerias/icon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+	<div class="divGrande">
+		<nav>
+			<div class="wrapper arriba">
+				<div class="logoConHamb">
+					<div class="logoi"> <img src="nuevasLibrerias/img/LibrosCR3.png"></div>
+					<div class="hamb">
+						<a href="javascript:void(0);" class="icon" onclick="ensennar()">
+							<i class="fa fa-bars"></i>
+						</a>
+					</div>
+				</div>
+				<div id="menu1" class="linksn">
+					<a href="/mainPage">Inicio</a>
+					<a href="/buscarLibros">Libros</a>
+					<a href="/buscarClub">Clubes de Lectura</a>
+				</div>
+			</div>
+			<div class="abajo">
+				<hr>
+				<div id="menu3" class="linksn">
+				</div>
+			</div>
+		</nav>
+
+
+		<!-- Debería de quedarse así, No modificar a menos que sea ya necesario. -->
+		<div class="advertencia ocultar" id="advertencia">
+			<h3 class="tituloAdv" id="tituloAdv"></h3>
+			<p class="mensaje" id="mensaje"></p>
+			<div class="btns">
+				<div class="cajaBtn" id="btnCancelar">
+					<button type="submit" class="btnError advertenciaBtn" onclick="cancelar();">Cancelar</button>
+				</div>
+				<div class="cajaBtn" id="btnAceptar">
+					<button type="submit" class="btnVerde advertenciaBtn" onclick="aceptar();">Aceptar</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="caja" id="caja">
+		<div class="sidebar">
+			<div class="sideMenu">
+				<h2>Menú</h2>
+				<ul>
+					<li><a href="/buscarAdministrador">Administradores</a></li>
+					<li><a href="/buscarAutoresAdmin">Autores</a></li>
+					<li><a href="/buscarBitacora">Bitácora</a></li>
+					<li><a href="/buscarCategoria">Categorías</a></li>
+					<li><a href="/buscarGenero">Géneros</a></li>
+					<li><a href="/impuesto">Impuesto de Ventas</a></li>
+					<li><a href="/agregarInventarioAdmin">Inventario</a></li>
+					<li><a href="/buscarLibrosAdmin">Libros</a></li>
+					<li><a href="/nuevasLibrerias">Nuevas Librerías</a></li>
+					<li><a href="/promociones">Promociónes</a></li>
+					<li><a href="/buscarSucursalAdmin">Sucursales</a></li>
+					<li><a href="/buscarUsuariosAdmin">Usuarios</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="contenido">
+				<div class="agregar">
+					<h1 class="titulo">Buscar librería</h1>
+					<input id="buscarLibreria" name="nombre" type="text" class="inputLogin inputAgregar" placeholder="Nombre de la librería">
+					<button type="submit" class="btnVerde btnPequenno">Buscar</button>
+				</div>
+				<ul id="lista" class="lista">
+					<li>Favor busque una librería</li>
+				</ul>
+		</div>
+	</div>
+
+		<footer>
+			<div class="footerLogo">
+				<img src="nuevasLibrerias/img/librosEddy3.png" />
+			</div>
+			<div class="wrapper">
+				<div class="contenedores wrapper">
+					<div class="footerContenedor">
+						<a>Acerca de nosotros</a>
+						<a>Contáctenos</a>
+						<a>Preguntas frecuentes</a>
+					</div>
+					<div class="footerContenedor">
+						<a>Políticas de uso</a>
+						<a>Términos de servicio</a>
+					</div>
+					<div class="footerContenedor">
+						<a href="/registrar">Registrarse</a>
+						<a href="/login">Iniciar Sesión</a>
+					</div>
+				</div>
+				<div class="footerClientes wrapper">
+					<div class="footerClientesImg">
+						<img src="nuevasLibrerias/img/barnesnoble.png" />
+					</div>
+					<div class="footerClientesImg">
+						<img src="nuevasLibrerias/img/booksforkids.png" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="nuevasLibrerias/js/javascript.js"></script>
+	<script src="nuevasLibrerias/js/buscar.js"></script>
+</body>
+
+</html>

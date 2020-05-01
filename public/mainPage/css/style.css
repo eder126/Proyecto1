@@ -1,0 +1,818 @@
+@font-face {
+	font-family: Brandon Grotesque;
+	src: url("../../fonts/brandon-grotesque-light.woff");
+}
+
+html,
+body {
+    margin: 0;
+    background-image: url("../img/blueBG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapper {
+	overflow: auto;
+}
+
+p,
+a {
+	color: #30343F;
+	font-family: 'Trebuchet MS';
+	text-decoration: none;
+}
+
+
+a:hover {
+    cursor: pointer;
+	color: #B88C4B;
+	cursor: pointer;
+}
+
+.divGrande {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+
+/*  Nav  */
+
+
+.registrarLogin {
+    margin: 0;
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-left: 1.8px solid #36558F;
+    color: #30343F;
+    font-family: "Trebuchet MS";
+    text-decoration: none;
+}
+
+.registrarLogin:hover {
+    cursor: pointer;
+    color: #B88C4B;
+}
+
+.nombrePerfil {
+    margin-right: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: "Trebuchet MS";
+    font-size: 1.2rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFEA;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 555;
+    right: 0;
+    font-family: "Trebuchet MS";
+    font-size: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content > p > a {
+    color: #30343F;
+    text-decoration: none;
+}
+
+.dropdown-content > p > a:hover {
+    cursor: pointer;
+    color: #B88C4B;
+}
+
+nav {
+    background-color: #FFFFEA;
+    padding: 20px;
+}
+
+.imgTrofeo {
+	margin-bottom: 5%;
+	height: 120px !important;
+}
+
+.hamb {
+    display: none;
+}
+
+.logoi {
+    float: left;
+    width: 25%;
+}
+
+.linksn {
+    float: right;
+}
+
+.linksn > a {
+    margin: 0;
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #30343F;
+    font-family: "Trebuchet MS";
+    border-left: 1.8px solid #36558F;
+    text-decoration: none;
+}
+
+.linksn > a:hover {
+    cursor: pointer;
+    color: #B88C4B;
+}
+
+.linksn2 {
+    float: right;
+}
+
+.linksn2 > a > i {
+    font-size: 1.4rem;
+}
+
+.linksn2 > a > i:hover {
+    cursor: pointer;
+    color: #B88C4B;
+}
+
+.logoi > img {
+    height: auto;
+    width: 60%;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+hr {
+    background-color: #30343F;
+}
+
+.linksn2 > a > img {
+    width: 30%;
+    height: auto;
+
+}
+
+/* Advertencia */
+
+.advertencia {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFEA;
+    width: 40%;
+    z-index: 99;
+    border: 1.5px solid rgba(21, 146, 230, 0.55);
+}
+
+
+.tituloAdv {
+    text-align: center;
+    font-family: 'Brandon Grotesque';
+    font-weight: 500;
+}
+
+
+.mensaje {
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    font-weight: 500;
+}
+
+.overlay {
+    filter: blur(3px);
+    opacity: 0.5;
+}
+
+
+::placeholder {
+	font-size: 16px;
+	font-family: 'Trebuchet MS';
+	text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.btns {
+    text-align: center;
+}
+
+
+
+.btnVerde {
+    background-color: #009688;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    margin: 20px 2px;
+    border-radius: 2px;
+    box-shadow: 0.5px 1px 0 grey;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+.ocultar {
+    display: none !important;
+}
+
+.btnVerde:hover {
+    cursor: pointer;
+    background-color: #2fb2a6;
+    transition: color 0.3s;
+}
+
+.btnError {
+    background-color: #E15050;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    width: 15%;
+    margin: 20px 30px;
+    border-radius: 2px;
+    box-shadow: 0.5px 1px 0 grey;
+}
+
+.btnError:hover {
+    cursor: pointer;
+    background-color: #e57777;
+    transition: color 0.3s;
+}
+
+
+.cajaBtn {
+    display: inline;
+}
+
+
+
+
+
+/* Barra Busqueda */
+
+.barraBusquedas {
+    background-color: #4D8AB2;
+    width: 100%;
+    align-self: center;
+    margin: 0;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.selectorBusqueda {
+    float: left;
+    width: 15%;
+}
+
+.barraBusqueda > input {
+    text-align: left;
+}
+
+.barraBusqueda {
+    float: left;
+    width: 80%;
+}
+
+.input {
+    border: 1px solid #707070;
+    background-color: white;
+    width: 90%;
+    box-shadow: 0 4px 6px RGBA(0, 0, 0, 0.16);
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.select {
+    box-sizing: content-box;
+}
+
+.iconoBusqueda {
+    float: left;
+    width: 5%;
+}
+
+.busquedaItems {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: stretch;
+}
+
+.iconoBusqueda {
+    font-size: xx-large;
+}
+
+
+
+/*  Caja  */
+
+
+.caja {
+    background-color: #FFFFEA;
+    width: 100%;
+    align-self: center;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.caja2 {
+    background-color: #FFFFEA;
+    flex: 1;
+}
+
+.cajaLibro {
+    width: 20%;
+    margin: 0.5%;
+    box-sizing: content-box;
+}
+
+.fotoLibro {
+    text-align: center;
+}
+
+.libros {
+    padding: 2% 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fotoLibro > img {
+	height: 280px;
+    width: 100%;
+    object-fit: fill;
+}
+
+
+.datosPerfil {
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    font-weight: 500;
+    margin-top: 2%;
+    padding: 1%;
+}
+
+
+.mostrarMas {
+    color: #1B50E2;
+    font-family: 'Trebuchet MS';
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.mostrarMas > a:hover {
+    cursor: pointer;
+    color: rgb(121, 156, 255);
+
+}
+
+.filtrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2%;
+    margin-right: 3%;
+}
+
+.xSalir {
+    display: block;
+    text-align: right;
+    padding: 1% 1% 0 0;
+}
+
+.xSalir > img {
+    width: 2.6%;
+    height: auto;
+}
+
+.titulo {
+    text-align: center;
+    font-family: 'Brandon Grotesque';
+    font-weight: 500;
+}
+
+input {
+    border: 1px solid #707070;
+    background-color: white;
+    width: 30%;
+    height: 4%;
+    box-shadow: 0 4px 6px RGBA(0, 0, 0, 0.16);
+}
+
+.input {
+    text-align: right;
+}
+
+.carrito {
+    width: 15%;
+    padding-top: 6%;
+    padding-left: 1%;
+}
+
+.acomPrecio > p,
+img {
+    float: left;
+}
+
+.acomPrecio > p {
+    padding-left: 30%
+}
+
+.trofeo {
+    float: left;
+}
+
+.contenedorLibrosPerfil {
+    width: 20%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+
+.libro {
+    height: 300px;
+    width: 200px;
+    object-fit: fill;
+}
+
+.contenedorLibros {
+    width: 30%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.librodestacado {
+    height: 280px;
+    width: 100%;
+    object-fit: fill;
+}
+
+.trofeos {
+    width: 48%;
+    float: left;
+    margin-right: 58px;
+}
+
+.clubes {
+    width: 48%;
+    float: left;
+    height: 100%;
+}
+
+.acomClub {
+    width: 100%;
+}
+
+.acomClub > p {
+    padding-left: 5%;
+}
+
+.acomClub > h2 {
+    margin-bottom: 0;
+}
+
+.libroClub {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.contenedorLibros-2 {
+    text-align: center;
+}
+
+.mapa {
+    min-width: 200px;
+    width: 100%;
+    height: 400px;
+}
+
+.map-container {
+    text-align: center;
+    /*padding: 0 5%;*/
+    box-sizing: border-box;
+    /*padding-bottom: 30px;
+    padding-left: 2%;
+    padding-right: 4%;*/
+}
+
+.caja-2 {
+    width: 100%;
+}
+
+.cajaGrande {
+    align-self: center;
+    flex: 1 1 auto;
+    position: relative;
+    padding: 20px;
+}
+
+.cajaMedio {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.trofeos-2 {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.titulo-2 {
+    display: none;
+}
+
+/*  Footer  */
+
+
+footer {
+	margin-top: auto;
+	background-color: #FFFFEA;
+	padding: 2%;
+}
+
+.footerLogo>img {
+	height: auto;
+	width: 15%;
+}
+
+.contenedores {
+	width: 80%;
+	float: left;
+}
+
+.footerContenedor {
+	width: 33%;
+	float: left;
+}
+
+.footerContenedor>a {
+	display: block;
+	color: #30343F;
+}
+
+.footerContenedor>a:hover {
+    cursor: pointer;
+	display: block;
+	color: #B88C4B;
+}
+
+.footerClientes {
+	width: 20%;
+	float: left;
+}
+
+.footerClientesImg {
+	margin: 0 2%;
+}
+
+.footerClientesImg>img {
+	height: auto;
+	width: 100%;
+}
+
+.footerClientesImg {
+	float: left;
+	width: 45%;
+}
+
+.linksAbajo {
+	width: 100%;
+	height: auto;
+}
+
+
+
+
+
+@media (max-width: 796px) {
+
+    .hamb {
+        display: block;
+        float: right;
+    }
+
+    .notHidden {
+        display: block !important;
+    }
+
+    .linksn {
+        width: 100%;
+    }
+
+    .linksn > a {
+        display: block;
+        background-color: #efefdd;
+        font-size: 1.1rem;
+    }
+
+    .linksn > a:hover {
+    cursor: pointer;
+        background-color: #ddddc9;
+        color: #B88C4B;
+    }
+
+
+    .linksn2 {
+        display: none;
+        float: none;
+        text-align: center;
+    }
+
+    .linksn2 > a {
+        margin: 0;
+        padding: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color: #30343F;
+    }
+
+    .linksn2 > a:hover {
+    cursor: pointer;
+        color: #B88C4B;
+    }
+
+    .logoConHamb {
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+    }
+
+    .icon {
+        font-size: 40px;
+        margin-left: auto;
+    }
+
+    .hamb {
+        margin-left: auto;
+    }
+
+    .footerLogo {
+        text-align: center;
+    }
+
+    .footerLogo > img {
+        height: auto;
+        width: 30%;
+    }
+
+    .contenedores {
+
+        width: 100%;
+    }
+
+    .footerContenedor {
+        text-align: center;
+    }
+
+    .footerClientes {
+        display: none;
+    }
+
+
+
+
+    .xSalir {
+        padding: 2% 2% 0 0;
+    }
+
+    .xSalir > img {
+        width: 5%;
+    }
+
+    .barraBusquedas {
+        text-align: center;
+    }
+
+    .selectorBusqueda {
+        width: 80%;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 2%;
+    }
+
+    .barraBusqueda {
+        width: 90%;
+    }
+
+    .iconoBusqueda {
+        width: 5%;
+    }
+
+
+    .cajaLibro {
+        width: 40%;
+        margin-bottom: 2%;
+    }
+
+    .filtrar {
+        position: initial;
+        top: 0;
+        left: 0;
+    }
+
+    .libro {
+        height: 150px;
+    }
+
+    .datosPerfil {
+        font-size: 7.5px;
+    }
+
+    .acomPrecio > img {
+        padding-top: 10px;
+    }
+
+    .contenedorLibrosPerfil {
+        width: 50%;
+    }
+
+    .trofeos {
+        margin-right: 20px;
+    }
+
+    .contenedorLibros {
+        margin-left: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 60%;
+    }
+
+    .contenedorLibrosTrofeos {
+        width: 30%;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+
+    .librodestacado {
+        height: 165px;
+    }
+
+    .trofeoOro {
+        display: block;
+    }
+
+    .librosTrofeo {
+        margin-top: 5%;
+    }
+
+    .librosContenedor-2 {
+        display: none;
+    }
+
+    .titulo-2 {
+        display: block;
+    }
+
+    .trofeos {
+        display: none;
+    }
+
+    .contenedorLibros-2 {
+        margin-left: 0;
+        padding-top: 45px;
+    }
+
+    .acomClub > p {
+        padding-left: 25%;
+    }
+
+    .fotoLibro > img {
+        height: 250px;
+    }
+
+    .tituloLibro {
+        font-size: 1rem;
+    }
+
+    .titulo {
+        font-size: 1.2rem;
+    }
+
+
+    .libroClub {
+        width: 100%;
+        height: 100px;
+    }
+
+    .acomPrecio {
+        font-size: 1rem;
+    }
+
+}

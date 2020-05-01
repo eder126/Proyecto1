@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Producto</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://kit.fontawesome.com/98bd4b18c1.js"></script>
+		<link rel="stylesheet" type="text/css" href="landingProducto/css/style.css">
+		<link rel="apple-touch-icon" sizes="57x57" href="landingProducto/icon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="landingProducto/icon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="landingProducto/icon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="landingProducto/icon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="landingProducto/icon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="landingProducto/icon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="landingProducto/icon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="landingProducto/icon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="landingProducto/icon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="landingProducto/icon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="landingProducto/icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="landingProducto/icon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="landingProducto/icon/favicon-16x16.png">
+		<link rel="manifest" href="landingProducto/icon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="landingProducto/icon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+		<div class="divGrande">
+			<!-- Debería de quedarse así, No modificar a menos que sea ya necesario. -->
+			<div class="advertencia ocultar" id="advertencia">
+				<h3 class="tituloAdv" id="tituloAdv"></h3>
+				<p class="mensaje" id="mensaje"></p>
+				<div class="btns">
+					<div class="cajaBtn" id="btnCancelar">
+						<button type="submit" class="btnError" onclick="cancelar();">Cancelar</button>
+					</div>
+					<div class="cajaBtn" id="btnAceptar">
+						<button type="submit" class="btnVerde" onclick="aceptar();">Aceptar</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="caja1" id="caja">
+                <div class="logo">
+                    <img class="logoCaja" src="landingProducto/img/LibrosCR2.png"/>
+				</div>
+                <div class="informacionProducto">
+                    <p>
+                        Una iniciativa por parte de la librería 
+                        ‘<strong><a href="https://www.barnesandnoble.com/" target="_blank">Barnes and Noble</a></strong>’,
+                        apoyado por la fundación 
+                        ‘<strong><a href="https://www.booksforkids.org/" target="_blank">Books for Kids</a></strong>’.
+                    </p>
+                </div>
+                <div class="informacionProducto">
+                    <p>
+                        Los mejores libros, por las mejores Librerías, selectas de forma exclusiva para brindar la mejor calidad posible, con el objetivo de no solo compartir conocimiento en forma de libros, pero conectar a las personas por medio de una comunidad literaria e intelectual.
+                    </p>
+                </div>
+            </div>
+			<div class="module">
+				<div class="module-inside">
+					<div class="informacionProducto2">
+						<p>
+							¡Clubes de lectura donde podrás interactuar y conversar con miles de usuarios de todo el país!
+						</p>
+						<div class="btns">
+							<div class="cajaBtn">
+								<a href="/buscarClub"><button type="submit" class="btnVerde2">
+									Visitar clubes
+								</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>  
+			<div class="caja1" id="caja">
+				<div class="contenedorVideo">
+					<iframe src="https://www.youtube.com/embed/21x2qD4j7wE" 
+					frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen></iframe>
+				</div>
+				<div class="informacionProducto3">
+					<p>
+						¡<em><a href="/registrar">Regístrate</a></em> ó 
+						<em><a href="/login">Inicia Sesión</a></em>
+						y forma parte de la comunidad Libros CR! <!-- Libros Costa Rica!-->
+					</p>
+				</div>
+			</div>
+		</div>
+		<script src="landingProducto/js/javascript.js"></script>
+	</body>
+</html>

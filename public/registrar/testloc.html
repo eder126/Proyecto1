@@ -1,0 +1,247 @@
+<head>
+	<style>
+		.oculto {
+			display: none;
+		}
+	</style>
+</head>
+
+<select id="provincias" name="provincia" onchange="getCantones(this.value);">
+</select>
+<select class="oculto" id="cantones" name="canton" onchange="getDistritos(this.value);">
+</select>
+<select class="oculto" id="distritos" name="distritos" onchange="distritoSeleccionado();">
+</select>
+
+<script>
+	var provincias = document.getElementById("provincias"),
+		cantones = document.getElementById("cantones"),
+		distritos = document.getElementById("distritos");
+	datos(
+		"https://ubicaciones.paginasweb.cr/provincias.json",
+		function (data) {
+			provincias.innerHTML = popular(data);
+		}
+	);
+
+
+	function datos(url, callback) {
+		fetch(url, {
+			method: "GET",
+			headers: {
+				"Accept": "application/json"
+			}
+		}).then(
+			function (response) {
+				if (response.status != 200) {
+					console.log("Ocurrió un error con el servicio: " + response.status);
+					error("Error", "Favor intentar luego", true, false);
+				} else {
+					return response.json();
+				}
+			}
+		).then(data => {
+			callback(data);
+		}).catch(function (error) {
+			console.log(error);
+			error("Error", "Favor intentar luego", true, false);
+		});
+	}
+
+
+	function getCantones(idProvincia) {
+		map.setZoom(9);
+		codeAddress("Costa Rica, " + provincias.options[provincias.selectedIndex].innerText);
+		datos(
+			"https://ubicaciones.paginasweb.cr/provincia/" + idProvincia + "/cantones.json",
+			function (data) {
+				cantones.innerHTML = popular(data);
+				cantones.classList.remove("oculto");
+			}
+		);
+	}
+
+	function getDistritos(idCanton) {
+		map.setZoom(12);
+		codeAddress("Costa Rica, " + provincias.options[provincias.selectedIndex].innerText + ", " + cantones.options[
+		cantones.selectedIndex].innerText);
+
+		var idProvincia = provincias.value;
+		datos(
+			"https://ubicaciones.paginasweb.cr/provincia/" + idProvincia + "/canton/" + idCanton + "/distritos.json",
+			function (data) {
+				distritos.innerHTML = popular(data);
+				distritos.classList.remove("oculto");
+			}
+		);
+	}
+
+	function distritoSeleccionado() {
+		map.setZoom(15);
+		codeAddress("Costa Rica, " + provincias.options[provincias.selectedIndex].innerText + ", " + cantones.options[
+		cantones.selectedIndex].innerText + ", " + distritos.options[distritos.selectedIndex].innerText);
+	}
+
+	//var query = "Costa Rica, "+jQuery('#provincias option:selected').text()+","+jQuery('#cantones option:selected').text()+","+jQuery('#distritos option:selected').text();
+	//view-source:https://programando.paginasweb.cr/ejemplos/ubicaciones/
+
+
+	function popular(array) {
+		var html = "<option default>Seleccione una opción</option>";
+		for (key in array) {
+			html += "<option value='" + key + "'>" + array[key] + "</option>";
+		}
+		return html;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	var map;
+	var geocoder;
+	var crLat = 9.6301892;
+	var crLng = -84.2541843;
+
+	function initMap() {
+		geocoder = new google.maps.Geocoder();
+		map = new google.maps.Map(document.getElementById('map'), {
+			center: {
+				lat: crLat,
+				lng: crLng
+			},
+			zoom: 7,
+			mapTypeId: google.maps.MapTypeId.HYBRID
+		});
+		marker = new google.maps.Marker({
+			map: map,
+			draggable: true,
+			animation: google.maps.Animation.DROP,
+			position: {
+				lat: crLat,
+				lng: crLng
+			}
+		});
+		google.maps.event.addListener(marker, 'dragend', function () {
+			onMakerMove(marker);
+		});
+	}
+
+	function codeAddress(address) {
+		geocoder.geocode({
+			'address': address
+		}, function (results, status) {
+
+			if (status == google.maps.GeocoderStatus.OK) {
+				map.setCenter(results[0].geometry.location);
+				marker.setPosition(results[0].geometry.location);
+				onMakerMove(marker);
+			} else {
+				console.debug('No pudimos obtener la dirección porque: ' + status);
+			}
+		});
+	}
+
+	function onMakerMove(marker) {
+		document.getElementById("coordenadas").value = marker.getPosition().toString().replace('(', '').replace(')', '');
+	}
+
+	function coordenadasCambio() {
+		let coords = document.getElementById("coordenadas").value.split(", "),
+			lat = Number(coords[0]),
+			lng = Number(coords[1]);
+
+		console.log(lat, lng);
+
+		marker.setPosition({
+			lat: lat,
+			lng: lng
+		});
+		map.setCenter({
+			lat: lat,
+			lng: lng
+		});
+	}
+</script>
+
+<style>
+	.form-row {
+		padding: 1em;
+		font-size: 1.2em
+	}
+
+	.canton,
+	.distrito,
+	.send {
+		display: none;
+	}
+
+	.form-desc,
+	.data-container,
+	.map-container {
+		display: inline;
+		float: left;
+		min-width: 110px;
+	}
+
+	.form-val {
+		display: inline;
+		float: left;
+	}
+
+	.form-val select {
+		font-size: 1rem;
+		min-width: 120px;
+	}
+
+	.send input {
+		padding: 0.5em 1em;
+		font-size: 0.75em;
+		margin: 0.6em 0.5em;
+		border: none;
+		background-color: #198C11;
+		color: white;
+	}
+
+	.map-container {
+		width: 50%;
+		margin: 1em;
+	}
+
+	#map {
+		min-width: 200px;
+		width: 100%;
+		height: 400px;
+	}
+
+	input#coordenadas {
+		margin: 1px;
+		font-size: 1rem;
+	}
+</style>
+
+<body>
+
+
+
+
+	<div class="map-container">
+		<div id="map"></div>
+	</div>
+
+
+	<input type="text" onchange="coordenadasCambio()" id="coordenadas" name="coordenadas"
+		value="9.6301892, -84.2541843" />
+
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3cOQNB4cQjQDSGWiB_nT2H2pEOuD3w60&callback=initMap"
+		async defer></script>
+
+</body>
